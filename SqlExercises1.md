@@ -25,13 +25,12 @@ Understanding these core concepts will provide a strong foundation for more adva
    - On macOS or Linux, search your applications for “pgAdmin” or run `pgAdmin4` if installed via a package manager.
    - Alternatively, if you prefer the command line, open your terminal and use the `psql` tool to access the PostgreSQL server.
 
-3. **Create a New Database**
-   - In pgAdmin, expand the server tree and right-click on **Databases** to create a new database (e.g., `mydb`).
-   - If using `psql`, you can run:
-     ```sql
-     CREATE DATABASE mydb;
-     \c mydb  -- to connect to the newly created database
-     ```
+3. **Learning to use pgAdmin**
+   - Here is a great tutorial video that covers the basics of **pgAdmin**: [pgAdmin Tutorial - How to Use pgAdmin]
+   - You can follow the tutorial using **pgAmdin** in your own computer
+
+4. **Create a New Database**
+   - In pgAdmin, expand the server tree and right-click on **Databases** to create a new database for the exercises, and name it as **SqlExercises**.
 
 ---
 
@@ -54,7 +53,8 @@ Understanding these core concepts will provide a strong foundation for more adva
    ```sql
    CREATE TABLE employees (
         id      INT PRIMARY KEY,
-        name    VARCHAR(50) NOT NULL,
+        forename    VARCHAR(50) NOT NULL,
+        surname  VARCHAR(50) NOT NULL,
         salary  INT,
         company VARCHAR(50)
     );
@@ -80,23 +80,24 @@ Understanding these core concepts will provide a strong foundation for more adva
    Run the following inserts:
 
    ```sql
-   INSERT INTO employees (id, name, salary, company) VALUES
-    (1, 'Uolevi',   5000, 'Google'),
-    (2, 'Maija',    6000, 'Google'),
-    (3, 'Liisa',    2000, 'Amazon'),
-    (4, 'Kaaleppi', 7500, 'Microsoft');
+   INSERT INTO employees (id, forename, salary, company) VALUES
+    (1, 'Uolevi',   'Korhonen',  5000, 'Google'),
+    (2, 'Maija',    'Virtanen',  6000, 'Google'),
+    (3, 'Liisa',    'Lahtinen',  2000, 'Amazon'),
+    (4, 'Kaaleppi', 'Korhonen',  7500, 'Microsoft');
+    (5, 'Pekka',    'Virtanen',  6000, 'Google');
+    (6, 'Liisa',    'Lahtinen',  7500, 'Microsoft');
+    (7, 'Kaaleppi', 'Korhonen',   7500, 'Amazon');
    ```
 
 ---
 
 ## SQL Query Exercises
 
-1. **Get names of all the movies**
+> [!NOTE]
+> Exercises 1-10 use the **movies** table
 
-   ```sql
-   SELECT name
-   FROM movies;
-   ```
+### 1. **Get names of all the movies**
 
    **Expected Result**  
    | name |
@@ -107,12 +108,9 @@ Understanding these core concepts will provide a strong foundation for more adva
    | Dumbo |
    | Bambi |
 
-2. **Get names and publication years for all movies**
 
-   ```sql
-   SELECT name, year
-   FROM movies;
-   ```
+
+### 2. **Get names and publication years for all movies**
 
    **Expected Result**  
    | name | year |
@@ -123,13 +121,9 @@ Understanding these core concepts will provide a strong foundation for more adva
    | Dumbo | 1941 |
    | Bambi | 1942 |
 
-3. **Get names of all the movies published in 1940**
 
-   ```sql
-   SELECT name
-   FROM movies
-   WHERE year = 1940;
-   ```
+
+### 3. **Get names of all the movies published in 1940**
 
    **Expected Result**  
    | name |
@@ -137,19 +131,175 @@ Understanding these core concepts will provide a strong foundation for more adva
    | Fantasia |
    | Pinocchio |
 
-4. **Get names of all the movies published before 1950**
 
-   ```sql
-   SELECT name
-   FROM movies
-   WHERE year < 1950;
-   ```
+
+### 4. **Get names of all the movies published before 1950**
 
    **Expected Result**  
    | name |
    |------------|
    | Snow White |
    | Fantasia |
-   | Pinocchio |
-   | Dumbo |
    | Bambi |
+
+
+### 5. **Get the names of the movies published between 1940 and 1950**  
+
+   **Expected Result**  
+   | name      |
+   |-----------|
+   | Fantasia  |
+   | Bambi     |
+
+
+### 6. **Get the names of the movies published before 1950 and after 1980**  
+
+   **Expected Result**  
+   | name       |
+   |------------|
+   | Snow White |
+   | Fantasia   |
+   | Bambi      |
+
+
+### 7. **Get the names of the movies which were not published in 1940**  
+
+   **Expected Result**  
+   | name       |
+   |------------|
+   | Dumbo      |
+   | Bambi      |
+
+
+### 8. **Get the names of all the movies in alphabetical order**  
+
+   **Expected Result**  
+   | name       |
+   |------------|
+   | Bambi      |
+   | Dumbo      |
+   | Fantasia   |
+   | Pinocchio  |
+   | Snow White |
+
+
+### 9. **Get the names of all the movies in reverse alphabetical order**  
+
+   **Expected Result**  
+   | name       |
+   |------------|
+   | Snow White |
+   | Pinocchio  |
+   | Fantasia   |
+   | Dumbo      |
+   | Bambi      |
+
+
+### 10. **Get the names and publication years of movies, primarily in reverse order according to the publication year and secondarily in alphabetical order**  
+
+   **Expected Result**  
+   | name       | year |
+   |------------|------|
+   | Bambi      | 1942 |
+   | Dumbo      | 1941 |
+   | Fantasia   | 1940 |
+   | Pinocchio  | 1940 |
+   | Snow White | 1937 |
+
+---
+
+> [!NOTE]
+> Exercises 11-20 use the **employees** table
+
+
+### 11. **Get all different forenames**
+
+   **Expected Result**  
+   | forename   |
+   |------------|
+   | Uolevi     |
+   | Maija      |
+   | Pekka      |
+   
+
+
+### 13. **Get all the different names**  
+
+   **Expected Result**  
+   | forename   | surname  |
+   |------------|----------|
+   | Uolevi     | Korhonen |
+   | Maija      | Virtanen |
+   | Pekka      | Virtanen |
+
+
+### 13. **Get the amount of employees**
+
+   **Expected Result**  
+   | count |
+   |-------|
+   | 7     |
+
+
+### 14. **Get the amount of employees whose salary is over 2000**  
+
+   **Expected Result**  
+   | count |
+   |-------|
+   | 6     |
+
+
+### 15. **Get the sum of the employees' salaries**
+  
+   **Expected Result**  
+   | sum   |
+   |-------|
+   | 41500 |
+
+
+### 16. **Get the greatest salary** 
+ 
+   **Expected Result**  
+   | max  |
+   |------|
+   | 7500 |
+
+
+### 17. **Get the amount of different companies** 
+ 
+   **Expected Result**  
+   | count |
+   |-------|
+   | 3     |
+
+
+### 18. **Get the amount of employees for each company** 
+ 
+   **Expected Result**  
+   | company    | count |
+   |------------|-------|
+   | Amazon     | 2     |
+   | Google     | 3     |
+   | Microsoft  | 2     |
+
+
+### 19. **Get the largest salary of an employee for each company** 
+ 
+   **Expected Result**  
+   | company    | max_salary |
+   |------------|------------|
+   | Amazon     | 7500       |
+   | Google     | 6000       |
+   | Microsoft  | 7500       |
+
+
+### 20. **Get the greatest salary from those companies, where the salary is at least 5000**  
+   *(i.e., only include companies that have at least one employee with salary >= 5000, then get the greatest salary for each.)*  
+
+   **Expected Result**  
+   | company    | max_salary |
+   |------------|------------|
+   | Amazon     | 7500       |
+   | Google     | 6000       |
+   | Microsoft  | 7500       |
+```
