@@ -26,7 +26,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    - Alternatively, if you prefer the command line, open your terminal and use the `psql` tool to access the PostgreSQL server.
 
 3. **Learning to use pgAdmin**
-   - Here is a great tutorial video that covers the basics of **pgAdmin**: [pgAdmin Tutorial - How to Use pgAdmin]
+   - Here is a great tutorial video that covers the basics of **pgAdmin**: [pgAdmin Tutorial - How to Use pgAdmin](https://www.youtube.com/watch?v=WFT5MaZN6g4)
    - You can follow the tutorial using **pgAmdin** in your own computer
 
 4. **Create a New Database**
