@@ -92,7 +92,7 @@ Understanding these core concepts will provide a strong foundation for more adva
 
 ---
 
-## SQL Query Exercises
+## Part 4: SQL Query Exercises
 
 > [!NOTE]
 > Exercises 1-10 use the **movies** table
