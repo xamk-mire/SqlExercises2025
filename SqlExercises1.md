@@ -150,7 +150,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    | Bambi     |
 
 
-### 6. **Get the names of the movies published before 1950 and after 1980**  
+### 6. **Get the names of the movies published before 1940 and after 1941**  
 
    **Expected Result**  
    | name       |
