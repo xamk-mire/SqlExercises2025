@@ -221,7 +221,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    
 
 
-### 13. **Get all the different names**  
+### 12. **Get all the different names**  
 
    **Expected Result**  
    | forename   | surname  |
