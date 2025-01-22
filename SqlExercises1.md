@@ -80,13 +80,13 @@ Understanding these core concepts will provide a strong foundation for more adva
    Run the following inserts:
 
    ```sql
-   INSERT INTO employees (id, forename, salary, company) VALUES
+   INSERT INTO employees (id, forename, surname, salary, company) VALUES
     (1, 'Uolevi',   'Korhonen',  5000, 'Google'),
     (2, 'Maija',    'Virtanen',  6000, 'Google'),
     (3, 'Liisa',    'Lahtinen',  2000, 'Amazon'),
-    (4, 'Kaaleppi', 'Korhonen',  7500, 'Microsoft');
-    (5, 'Pekka',    'Virtanen',  6000, 'Google');
-    (6, 'Liisa',    'Lahtinen',  7500, 'Microsoft');
+    (4, 'Kaaleppi', 'Korhonen',  7500, 'Microsoft'),
+    (5, 'Pekka',    'Virtanen',  6000, 'Google'),
+    (6, 'Liisa',    'Lahtinen',  7500, 'Microsoft'),
     (7, 'Kaaleppi', 'Korhonen',   7500, 'Amazon');
    ```
 
@@ -133,14 +133,12 @@ Understanding these core concepts will provide a strong foundation for more adva
 
 
 
-### 4. **Get names of all the movies published before 1950**
+### 4. **Get names of all the movies published before 1940**
 
    **Expected Result**  
    | name |
    |------------|
    | Snow White |
-   | Fantasia |
-   | Bambi |
 
 
 ### 5. **Get the names of the movies published between 1940 and 1950**  
