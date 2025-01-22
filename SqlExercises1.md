@@ -218,6 +218,8 @@ Understanding these core concepts will provide a strong foundation for more adva
    | Uolevi     |
    | Maija      |
    | Pekka      |
+   | Liisa      |
+   | Kaaleppi   |
    
 
 
