@@ -146,7 +146,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    **Expected Result**  
    | name      |
    |-----------|
-   | Fantasia  |
+   | Dumbo     |
    | Bambi     |
 
 
@@ -156,7 +156,6 @@ Understanding these core concepts will provide a strong foundation for more adva
    | name       |
    |------------|
    | Snow White |
-   | Fantasia   |
    | Bambi      |
 
 
@@ -165,6 +164,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    **Expected Result**  
    | name       |
    |------------|
+   | Snow White |
    | Dumbo      |
    | Bambi      |
 
@@ -210,7 +210,7 @@ Understanding these core concepts will provide a strong foundation for more adva
 > Exercises 11-20 use the **employees** table
 
 
-### 11. **Get all different forenames**
+### 11. **Get all different unique forenames**
 
    **Expected Result**  
    | forename   |
@@ -221,7 +221,7 @@ Understanding these core concepts will provide a strong foundation for more adva
    
 
 
-### 12. **Get all the different names**  
+### 12. **Get eployees with unique forename and surname**  
 
    **Expected Result**  
    | forename   | surname  |
