@@ -179,7 +179,7 @@ Understanding these core concepts will provide a strong foundation for more adva
     (7, 5, 'B', '2024-01-20');
    ```
 
-## **Done. Now you have a small database to practice multi-table queries.**
+## **Done. Now you have a small database to practice exercise queries.**
 
 ---
 
@@ -188,12 +188,18 @@ Understanding these core concepts will provide a strong foundation for more adva
 1.  **BETWEEN: Find the students who were born between January 1, 1999 and December 31, 2000.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{83BD1566-949D-4D09-BBD2-B8B52E48F3B2}.png)
+
+***
 
 2.  **Retrieve all courses that have a `course_id` between 2 and 4 (inclusive)**
 
-    **Expected Result**  
+    **Expected Result**
+    
     ![alt text](Expected-Results/{97B366AC-9335-486A-BE10-6D3B3C4DCB0F}.png)
+
+***
 
 3.  **Display each student’s first name, GPA, and a new column that classifies the student into one of three categories:**
 
@@ -203,7 +209,10 @@ Understanding these core concepts will provide a strong foundation for more adva
     - If GPA is `NULL`, display `"No GPA"`
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{85A19811-4117-4B6E-9DA0-6FEC239A9011}.png)
+
+***
 
 4.  **For each enrollment, display the `enrollment_id`, `grade`, and a new column named `grade_comment` with the following logic:**
 
@@ -213,67 +222,106 @@ Understanding these core concepts will provide a strong foundation for more adva
     - If grade is `NULL` or anything else, then `"Not Assigned/Other"`.
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{E218BB45-4568-4C14-B3E9-51629F51D755}.png)
+
+***
 
 5.  **Find all students who live in either `'New York'`, `'Chicago'`, or `'Seattle'`.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{74528477-AE62-4091-B134-AFA1BD0C0A50}.png)
+
+***
 
 6.  **Find all students whose email ends with `@example.com`.**
 
-    **Expected Result**
-    ![alt text](Expected-Results/{691F7615-7DB7-4229-B27D-DF12B4E787DE}.png)
+     **Expected Result**
+    
+     ![alt text](Expected-Results/{691F7615-7DB7-4229-B27D-DF12B4E787DE}.png)
+
+***
 
 7.  **Find all students whose email ends with `@example.com`.**
 
-    **Expected Result**
-    ![alt text](Expected-Results/{F28560B2-7DEB-4849-9495-391B52A2DF26}.png)
+     **Expected Result**
+    
+     ![alt text](Expected-Results/{F28560B2-7DEB-4849-9495-391B52A2DF26}.png)
+
+***
 
 8.  **Retrieve all courses whose `course_name` contains the word `"Literature"`.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{A29D903A-BF75-49AF-8344-0ADF9E409D8C}.png)
+
+***
 
 9.  **Find all students who do not have a phone number on file (`phone` is `NULL`).**
 
-    **Expected Result**
-    ![alt text](Expected-Results/{3F3EED56-1A28-4EA0-B9D9-FEBF2D7B0050}.png)
+     **Expected Result**
+
+     ![alt text](Expected-Results/{3F3EED56-1A28-4EA0-B9D9-FEBF2D7B0050}.png)
+
+***
 
 10. **Find all enrollments where the grade is NOT assigned (i.e., `NULL`).**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{696DB1A8-90A4-4D0E-9823-4B25BF3E10D7}.png)
+
+***
 
 11. **Show the first 3 students (ordered by `student_id` ascending).**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{CE08790F-F52A-4387-AB7B-80D18DB77E12}.png)
+
+***
 
 12. **Show the next 2 students (after skipping the first 3), ordered by `student_id`.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{99362F28-C70C-4998-9DC2-BA10EEF8DD7C}.png)
+
+***
 
 13. **Find all departments whose budget is **above** the **average department budget**.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{859375A2-5ED8-4BC5-A55F-9C41A010CCC0}.png)
+
+***
 
 14. **List each student’s name and the number of courses they are enrolled in. Use a **subquery** in the `SELECT` clause to count enrollments.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{F14D07F9-E54B-46D2-A11A-C95345603D60}.png)
+
+***
 
 15. **Display each instructor’s name, salary, and a **running total** of salaries ordered by `hire_date`.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{54CE7FBC-2FAA-4523-BC23-75FE2499135B}.png)
+
+***
 
 16. **For each student, show the order of their enrollments (based on `enrollment_date`) along with a **cumulative count** of their enrollments.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{70203306-B284-4590-8600-4DB4511D8349}.png)
+
+***
 
 17. **For each department, find the **maximum** of the **average GPA** of students who are enrolled in that department’s courses. (This is slightly advanced—requires grouping by department, then calculating average GPAs by course, then finding the max.)**
 
@@ -283,19 +331,29 @@ Understanding these core concepts will provide a strong foundation for more adva
     2. Then group those results by department and find the max.
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{03C2F891-743F-443B-BE09-5EA94F72C082}.png)
+
+***
 
 18. **Calculate the **sum** of the **average credits** offered per department. In other words, for each department, you find the average number of credits of its courses, and then sum those averages across all departments.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{A79B309B-B9E8-43D4-9510-F44C9D6394D2}.png)
+
+***
 
 19. **Retrieve all courses whose `credits` are **greater** than **ANY** of the credits in the Mathematics (dept_id = 2) courses.**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{1D56FB05-5D0E-48EE-B781-B68E0A1738E2}.png)
+
+***
 
 20. **Retrieve all students whose GPA is **greater** than **ALL** the GPAs of students living in `'Los Angeles'`**
 
     **Expected Result**
+    
     ![alt text](Expected-Results/{2939974C-46C2-48AD-86E1-537EF18325CB}.png)
