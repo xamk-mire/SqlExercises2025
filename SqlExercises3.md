@@ -235,7 +235,7 @@ Understanding these core concepts will provide a strong foundation for more adva
 
 ***
 
-6.  **Find all students whose email ends with `@example.com`.**
+6.  **List all courses from departments 1 or 3. (Department IDs 1 = Computer Science, 3 = Literature.)**
 
      **Expected Result**
     
